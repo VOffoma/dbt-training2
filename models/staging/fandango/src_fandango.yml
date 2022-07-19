@@ -5,5 +5,5 @@ sources:
     database: raw_dev
     schema: fandango
     tables: 
-      - name: fandango_scope_comparison
+      - name: fandango_score_comparison
       - name: fandango_scrape
