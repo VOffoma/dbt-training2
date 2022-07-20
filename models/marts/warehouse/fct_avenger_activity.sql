@@ -1,6 +1,6 @@
 with avengers_history as (
     select * from {{ ref('stg_avengers__avengers_history') }}
-)
+),
 
 return_death_counts as (
     select
