@@ -2,3 +2,13 @@ version: 2
 
 models:
   - name: stg_avengers__avengers_history
+    columns:
+      - name: avenger_id
+        tests:
+          - unique
+      - name: avenger_name
+        tests:
+          - not_null
+      - name: year_joined
+        tests:
+          - is_valid_avenger_year
