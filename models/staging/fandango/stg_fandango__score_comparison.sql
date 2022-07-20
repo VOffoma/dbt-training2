@@ -8,7 +8,9 @@ final as (
 
   select
       md5("FILM") as movie_id,
-      "FILM" as movie_name,
+      {{strip_film_name('"FILM"')}} as movie_name,
+      "FILM" as movie_name_with_date,
+      {{strip_film_year('"FILM"')}} as movie_year,
       "ROTTENTOMATOES" as rotten_tomatoes_score,
       "ROTTENTOMATOES_USER" as rotten_tomatoes_user,
       "METACRITIC" as metacritic_score,
