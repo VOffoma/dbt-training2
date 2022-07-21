@@ -1,0 +1,23 @@
+dbt_training:
+  outputs:
+    dev:
+      account: eu45795.eu-west-2.aws
+      database: ANALYTICS_DEV
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      role: DBT_TRAINING
+      schema: DBT_VICTORIA
+      threads: 1
+      type: snowflake
+      user: "{{ env_var('DBT_USER') }}"
+      warehouse: DBT_TRAINING_WH
+    prod: 
+      account: eu45795.eu-west-2.aws
+      database: ANALYTICS
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      role: DBT_TRAINING
+      schema: DBT_VICTORIA
+      threads: 1
+      type: snowflake
+      user: "{{ env_var('DBT_USER') }}"
+      warehouse: DBT_TRAINING_WH   
+  target: dev
